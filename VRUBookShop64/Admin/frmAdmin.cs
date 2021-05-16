@@ -21,10 +21,17 @@ namespace VRUBookShop64.Admin
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            // เปิดฟอร์ม ตำแหน่งพนักงาน
-            frmPostion frm = new frmPostion();
-            frm.MdiParent = this;
-            frm.Show();
+            if (checkFormOpen())
+            {
+                return;
+            }
+           
+                // เปิดฟอร์ม ตำแหน่งพนักงาน
+                frmPostion frm = new frmPostion();
+                frm.MdiParent = this;
+                frm.Show(); ;
+         
+
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
@@ -39,11 +46,16 @@ namespace VRUBookShop64.Admin
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            frmEmployee frm = new frmEmployee();
-            frm.MdiParent = this;
-          //  frm.Dock = DockStyle.Top;
-            frm.Show();
+            if (checkFormOpen())
+            {
+                return;
+            } 
+                frmEmployee frm = new frmEmployee();
+                frm.MdiParent = this;
+                //  frm.Dock = DockStyle.Top;
+                frm.Show(); 
             
+           
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)
@@ -53,9 +65,26 @@ namespace VRUBookShop64.Admin
 
         private void tsbProductType_Click(object sender, EventArgs e)
         {
-            frmBookType frm = new frmBookType();
-            frm.MdiParent = this;
-            frm.Show();
+            if (checkFormOpen())
+            {
+                return;
+            }
+               frmBookType frm = new frmBookType();
+                frm.MdiParent = this;
+                frm.Show();
+            
+        }
+
+        private bool checkFormOpen()
+        {
+            bool isOpen = false;
+            if (Application.OpenForms.Count > 2)
+            {   
+                //    MessageBox.Show("มีฟอร์มเปิดอยู่");
+                    isOpen = true;
+                
+            }
+            return isOpen;
         }
     }
 }
