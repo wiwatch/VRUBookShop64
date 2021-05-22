@@ -34,16 +34,33 @@ namespace VRUBookShop64
         }
         public void create() // INSERT
         {
-
+            this.checkConnection();
+            string sql = "INSERT INTO tbBookType (BookTypeName) VALUES(@BookTypeName)";
+            SqlCommand cm = new SqlCommand(sql, con);
+            cm.Parameters.AddWithValue("@BookTypeName", this.BookTypeName);
+            cm.ExecuteNonQuery();
+            con.Close();
         }
         public void update()
         {
-
+            this.checkConnection();
+            string sql = "UPDATE tbBookType SET BookTypeName=@BookTypeName  " +
+                " WHERE BookTypeID=@BookTypeID";
+            SqlCommand cm = new SqlCommand(sql, con);
+            cm.Parameters.AddWithValue("@BookTypeName", this.BookTypeName);
+            cm.Parameters.AddWithValue("@BookTypeID", this.BookTypeID);
+            cm.ExecuteNonQuery();
+            con.Close();
         }
 
         public void delete()
         {
-
+            this.checkConnection();
+            string sql = "DELETE FROM tbBookType WHERE BookTypeID=@BookTypeID";
+            SqlCommand cm = new SqlCommand(sql, con);
+            cm.Parameters.AddWithValue("@BookTypeID", this.BookTypeID);
+            cm.ExecuteNonQuery();
+            con.Close();
         }
         public DataTable searchByID()
         {

@@ -60,7 +60,9 @@ namespace VRUBookShop64.Admin
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-
+            frmBook frm = new frmBook();
+            frm.MdiParent = this;
+            frm.Show();
         }
 
         private void tsbProductType_Click(object sender, EventArgs e)

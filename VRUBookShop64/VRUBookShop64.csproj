@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,6 +60,12 @@
     </Compile>
     <Compile Include="Admin\frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\frmBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\frmBook.Designer.cs">
+      <DependentUpon>frmBook.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\frmBookType.cs">
       <SubType>Form</SubType>
@@ -70,6 +85,7 @@
     <Compile Include="Admin\frmPostion.Designer.cs">
       <DependentUpon>frmPostion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Book.cs" />
     <Compile Include="BookType.cs" />
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -97,8 +113,50 @@
     <Compile Include="Sale\frmSaleMenu.Designer.cs">
       <DependentUpon>frmSaleMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Stock\frmBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\frmBooks.Designer.cs">
+      <DependentUpon>frmBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\frmBooksType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\frmBooksType.Designer.cs">
+      <DependentUpon>frmBooksType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\frmStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\frmStock.Designer.cs">
+      <DependentUpon>frmStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tbBooks.cs">
+      <DependentUpon>VRUBookShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbBookType.cs">
+      <DependentUpon>VRUBookShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VRUBookShopModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VRUBookShopModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VRUBookShopModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VRUBookShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VRUBookShopModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VRUBookShopModel.edmx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin\frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\frmBook.resx">
+      <DependentUpon>frmBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\frmBookType.resx">
       <DependentUpon>frmBookType.cs</DependentUpon>
@@ -131,6 +189,13 @@
     <EmbeddedResource Include="Sale\frmSaleMenu.resx">
       <DependentUpon>frmSaleMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Stock\frmBooksType.resx">
+      <DependentUpon>frmBooksType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\frmStock.resx">
+      <DependentUpon>frmStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -140,6 +205,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="VRUBookShopModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>VRUBookShopModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="VRUBookShopModel.edmx.diagram">
+      <DependentUpon>VRUBookShopModel.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -154,7 +226,16 @@
     <None Include="Resources\iconfinder_Key_131898.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Stock\" />
+    <Content Include="VRUBookShopModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>VRUBookShopModel.Context.cs</LastGenOutput>
+      <DependentUpon>VRUBookShopModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="VRUBookShopModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VRUBookShopModel.edmx</DependentUpon>
+      <LastGenOutput>VRUBookShopModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconfinder_business_card_4055380 %281%29.png" />
@@ -221,6 +302,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\booktype.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

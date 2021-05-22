@@ -1,7 +1,7 @@
 ﻿
-namespace VRUBookShop64.Admin
+namespace VRUBookShop64.Stock
 {
-    partial class frmBookType
+    partial class frmBooksType
     {
         /// <summary>
         /// Required designer variable.
@@ -30,23 +30,23 @@ namespace VRUBookShop64.Admin
         private void InitializeComponent()
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tsbClear = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbSave = new System.Windows.Forms.ToolStripButton();
+            this.tsbEdit = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbDelete = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.txtCondition = new System.Windows.Forms.ToolStripTextBox();
+            this.tsbSearch = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbShow = new System.Windows.Forms.ToolStripButton();
+            this.tsbExit = new System.Windows.Forms.ToolStripButton();
             this.labBookTypeID = new System.Windows.Forms.Label();
             this.txtBookTypeName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvBookType = new System.Windows.Forms.DataGridView();
-            this.tsbClear = new System.Windows.Forms.ToolStripButton();
-            this.tsbSave = new System.Windows.Forms.ToolStripButton();
-            this.tsbEdit = new System.Windows.Forms.ToolStripButton();
-            this.tsbDelete = new System.Windows.Forms.ToolStripButton();
-            this.tsbSearch = new System.Windows.Forms.ToolStripButton();
-            this.tsbShow = new System.Windows.Forms.ToolStripButton();
-            this.tsbExit = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookType)).BeginInit();
             this.SuspendLayout();
@@ -71,78 +71,9 @@ namespace VRUBookShop64.Admin
             this.tsbExit});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1079, 82);
-            this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.Size = new System.Drawing.Size(1068, 82);
+            this.toolStrip1.TabIndex = 9;
             this.toolStrip1.Text = "toolStrip1";
-            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 82);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 82);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 82);
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(224, 77);
-            this.toolStripLabel1.Text = "ป้อนรหัสประเภทหรือชื่อประเภท";
-            // 
-            // txtCondition
-            // 
-            this.txtCondition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCondition.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtCondition.Name = "txtCondition";
-            this.txtCondition.Size = new System.Drawing.Size(200, 82);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 82);
-            // 
-            // labBookTypeID
-            // 
-            this.labBookTypeID.AutoSize = true;
-            this.labBookTypeID.Location = new System.Drawing.Point(497, 126);
-            this.labBookTypeID.Name = "labBookTypeID";
-            this.labBookTypeID.Size = new System.Drawing.Size(0, 20);
-            this.labBookTypeID.TabIndex = 8;
-            // 
-            // txtBookTypeName
-            // 
-            this.txtBookTypeName.Location = new System.Drawing.Point(149, 124);
-            this.txtBookTypeName.Name = "txtBookTypeName";
-            this.txtBookTypeName.Size = new System.Drawing.Size(313, 26);
-            this.txtBookTypeName.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 127);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 20);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "ประเภทหนังสือ";
-            // 
-            // dgvBookType
-            // 
-            this.dgvBookType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBookType.Location = new System.Drawing.Point(14, 173);
-            this.dgvBookType.Name = "dgvBookType";
-            this.dgvBookType.RowHeadersWidth = 62;
-            this.dgvBookType.RowTemplate.Height = 28;
-            this.dgvBookType.Size = new System.Drawing.Size(1038, 245);
-            this.dgvBookType.TabIndex = 5;
-            this.dgvBookType.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBookType_CellClick);
             // 
             // tsbClear
             // 
@@ -153,6 +84,11 @@ namespace VRUBookShop64.Admin
             this.tsbClear.Text = "เคลียร์ฟอร์ม";
             this.tsbClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbClear.Click += new System.EventHandler(this.tsbClear_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 82);
             // 
             // tsbSave
             // 
@@ -174,6 +110,11 @@ namespace VRUBookShop64.Admin
             this.tsbEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbEdit.Click += new System.EventHandler(this.tsbEdit_Click);
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 82);
+            // 
             // tsbDelete
             // 
             this.tsbDelete.Image = global::VRUBookShop64.Properties.Resources.delete;
@@ -184,6 +125,24 @@ namespace VRUBookShop64.Admin
             this.tsbDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbDelete.Click += new System.EventHandler(this.tsbDelete_Click);
             // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 82);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(224, 77);
+            this.toolStripLabel1.Text = "ป้อนรหัสประเภทหรือชื่อประเภท";
+            // 
+            // txtCondition
+            // 
+            this.txtCondition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCondition.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtCondition.Name = "txtCondition";
+            this.txtCondition.Size = new System.Drawing.Size(200, 82);
+            // 
             // tsbSearch
             // 
             this.tsbSearch.Image = global::VRUBookShop64.Properties.Resources.iconfinder_search_2856511;
@@ -193,6 +152,11 @@ namespace VRUBookShop64.Admin
             this.tsbSearch.Text = "ค้นหาข้อมูล";
             this.tsbSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbSearch.Click += new System.EventHandler(this.tsbSearch_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 82);
             // 
             // tsbShow
             // 
@@ -214,20 +178,55 @@ namespace VRUBookShop64.Admin
             this.tsbExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbExit.Click += new System.EventHandler(this.tsbExit_Click);
             // 
-            // frmBookType
+            // labBookTypeID
+            // 
+            this.labBookTypeID.AutoSize = true;
+            this.labBookTypeID.Location = new System.Drawing.Point(495, 145);
+            this.labBookTypeID.Name = "labBookTypeID";
+            this.labBookTypeID.Size = new System.Drawing.Size(0, 20);
+            this.labBookTypeID.TabIndex = 13;
+            // 
+            // txtBookTypeName
+            // 
+            this.txtBookTypeName.Location = new System.Drawing.Point(158, 141);
+            this.txtBookTypeName.Name = "txtBookTypeName";
+            this.txtBookTypeName.Size = new System.Drawing.Size(313, 26);
+            this.txtBookTypeName.TabIndex = 12;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(23, 144);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 20);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "ประเภทหนังสือ";
+            // 
+            // dgvBookType
+            // 
+            this.dgvBookType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBookType.Location = new System.Drawing.Point(27, 185);
+            this.dgvBookType.Name = "dgvBookType";
+            this.dgvBookType.RowHeadersWidth = 62;
+            this.dgvBookType.RowTemplate.Height = 28;
+            this.dgvBookType.Size = new System.Drawing.Size(1006, 245);
+            this.dgvBookType.TabIndex = 10;
+            this.dgvBookType.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBookType_CellClick);
+            // 
+            // frmBooksType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1079, 443);
+            this.ClientSize = new System.Drawing.Size(1068, 518);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.labBookTypeID);
             this.Controls.Add(this.txtBookTypeName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvBookType);
-            this.Controls.Add(this.toolStrip1);
-            this.Name = "frmBookType";
+            this.Name = "frmBooksType";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ประเภทหนังสือ";
-            this.Load += new System.EventHandler(this.frmBookType_Load);
+            this.Load += new System.EventHandler(this.frmBooksType_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookType)).EndInit();

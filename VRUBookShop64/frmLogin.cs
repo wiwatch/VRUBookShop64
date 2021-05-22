@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using VRUBookShop64.Admin;
 using VRUBookShop64.Sale;
 using VRUBookShop64.Manager;
+using VRUBookShop64.Stock;
 namespace VRUBookShop64
 {
     public partial class frmLogin : Form
@@ -71,7 +72,10 @@ namespace VRUBookShop64
                 } 
                 else if (dt.Rows[0]["PosID"].ToString() == "2")
                 {
-                    MessageBox.Show("พนักงานคลังสินค้า");
+                    // MessageBox.Show("พนักงานคลังสินค้า");
+                    frmStock frm = new frmStock();
+                    frm.Show();
+                    this.Hide();
                 }
                 else if (dt.Rows[0]["PosID"].ToString() == "3")
                 {
