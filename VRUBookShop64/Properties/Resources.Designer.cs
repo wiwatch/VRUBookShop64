@@ -133,6 +133,36 @@ namespace VRUBookShop64.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_001_01_9588 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_001_01_9588", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_001_01_95881 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_001_01_95881", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_001_01_95882 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_001_01_95882", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_25_3319619 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_25_3319619", resourceCulture);
@@ -183,9 +213,39 @@ namespace VRUBookShop64.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_close_delete_70975 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_close_delete_70975", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_close_delete_709751 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_close_delete_709751", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_close_delete_709752 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_close_delete_709752", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_close_delete_709753 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_close_delete_709753", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,6 +273,36 @@ namespace VRUBookShop64.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_Gnome_Edit_Clear_32_549701 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_Gnome-Edit-Clear-32_549701", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_Gnome_Edit_Clear_32_549702 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_Gnome-Edit-Clear-32_549702", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_Gnome_Edit_Clear_32_549703 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_Gnome-Edit-Clear-32_549703", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_Key_131898 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_Key_131898", resourceCulture);
@@ -223,9 +313,69 @@ namespace VRUBookShop64.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_print_56096 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_print_56096", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_print_560961 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_print_560961", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_print_560962 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_print_560962", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_Save {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_Save", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_save_60316 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_save_60316", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_save_603161 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_save_603161", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_save_603162 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_save_603162", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

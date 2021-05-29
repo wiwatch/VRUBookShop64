@@ -60,6 +60,10 @@ namespace VRUBookShop64.Admin
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
+            if (checkFormOpen())
+            {
+                return;
+            }
             frmBook frm = new frmBook();
             frm.MdiParent = this;
             frm.Show();
@@ -81,12 +85,17 @@ namespace VRUBookShop64.Admin
         {
             bool isOpen = false;
             if (Application.OpenForms.Count > 2)
-            {   
-                //    MessageBox.Show("มีฟอร์มเปิดอยู่");
-                    isOpen = true;
+            {
+                this.showErrorMessage("มีฟอร์มเปิดทำงานอยู่แล้ว ปิดฟอร์มปัจจุบันก่อน");
+                isOpen = true;
                 
             }
             return isOpen;
+        }
+
+        private void showErrorMessage(string text)
+        {
+            MessageBox.Show(text, "ผิดพลาด", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

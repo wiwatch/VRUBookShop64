@@ -12,14 +12,16 @@ namespace VRUBookShop64.Stock
 {
     public partial class frmStock : Form
     {
-        public frmStock()
+        int EmpID;
+        public frmStock(int EmpID)
         {
             InitializeComponent();
+            this.EmpID = EmpID;
         }
 
         private void tsbProductType_Click(object sender, EventArgs e)
         {
-            frmBooksType frm = new frmBooksType();
+            frmBooksType frm = new frmBooksType(this.EmpID);
             frm.MdiParent= this;
             frm.Show();
         }
@@ -27,6 +29,11 @@ namespace VRUBookShop64.Stock
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmStock_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

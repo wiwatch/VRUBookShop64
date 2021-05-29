@@ -27,5 +27,7 @@ namespace VRUBookShop64
     
         public virtual DbSet<tbBooks> tbBooks { get; set; }
         public virtual DbSet<tbBookType> tbBookType { get; set; }
+        public virtual DbSet<tbSale> tbSale { get; set; }
+        public virtual DbSet<tbSaleDetail> tbSaleDetail { get; set; }
     }
 }

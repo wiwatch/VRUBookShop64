@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="dbBookShopModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="dbBookShopModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tbBooks">
           <Key>
             <PropertyRef Name="BookID" />
@@ -26,12 +26,34 @@
           <Property Name="BookTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="BookTypeName" Type="nvarchar" MaxLength="100" />
         </EntityType>
+        <EntityType Name="tbSale">
+          <Key>
+            <PropertyRef Name="SaleID" />
+          </Key>
+          <Property Name="SaleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmpID" Type="int" />
+          <Property Name="SaleDate" Type="datetime" />
+          <Property Name="TotalAmount" Type="int" />
+        </EntityType>
+        <EntityType Name="tbSaleDetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SaleID" Type="int" />
+          <Property Name="BookID" Type="int" />
+          <Property Name="Cost" Type="int" />
+          <Property Name="Price" Type="int" />
+          <Property Name="Amount" Type="int" />
+          <Property Name="Total" Type="int" />
+        </EntityType>
         <EntityContainer Name="dbBookShopModelStoreContainer">
           <EntitySet Name="tbBooks" EntityType="Self.tbBooks" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbBookType" EntityType="Self.tbBookType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbSale" EntityType="Self.tbSale" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbSaleDetail" EntityType="Self.tbSaleDetail" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="dbBookShopModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -59,7 +81,30 @@
         <EntityContainer Name="VRUBookShop" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tbBooks" EntityType="Self.tbBooks" />
           <EntitySet Name="tbBookType" EntityType="Self.tbBookType" />
+          <EntitySet Name="tbSale" EntityType="dbBookShopModel.tbSale" />
+          <EntitySet Name="tbSaleDetail" EntityType="dbBookShopModel.tbSaleDetail" />
         </EntityContainer>
+        <EntityType Name="tbSale">
+          <Key>
+            <PropertyRef Name="SaleID" />
+          </Key>
+          <Property Name="SaleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmpID" Type="Int32" />
+          <Property Name="SaleDate" Type="DateTime" Precision="3" />
+          <Property Name="TotalAmount" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbSaleDetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SaleID" Type="Int32" />
+          <Property Name="BookID" Type="Int32" />
+          <Property Name="Cost" Type="Int32" />
+          <Property Name="Price" Type="Int32" />
+          <Property Name="Amount" Type="Int32" />
+          <Property Name="Total" Type="Int32" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -86,6 +131,29 @@
               <MappingFragment StoreEntitySet="tbBookType">
                 <ScalarProperty Name="BookTypeID" ColumnName="BookTypeID" />
                 <ScalarProperty Name="BookTypeName" ColumnName="BookTypeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbSale">
+            <EntityTypeMapping TypeName="dbBookShopModel.tbSale">
+              <MappingFragment StoreEntitySet="tbSale">
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="SaleDate" ColumnName="SaleDate" />
+                <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+                <ScalarProperty Name="SaleID" ColumnName="SaleID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbSaleDetail">
+            <EntityTypeMapping TypeName="dbBookShopModel.tbSaleDetail">
+              <MappingFragment StoreEntitySet="tbSaleDetail">
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="BookID" ColumnName="BookID" />
+                <ScalarProperty Name="SaleID" ColumnName="SaleID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

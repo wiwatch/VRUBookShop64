@@ -12,11 +12,12 @@ namespace VRUBookShop64.Sale
 {
     public partial class frmSaleMenu : Form
     {
-        string EmpName;
-        public frmSaleMenu(string EmpName)
+        string EmpName,EmpID;
+        public frmSaleMenu(string EmpName,string EmpID)
         {
             InitializeComponent();
             this.EmpName = EmpName;
+            this.EmpID = EmpID;
         }
 
         private void frmSaleMenu_Load(object sender, EventArgs e)
@@ -27,6 +28,14 @@ namespace VRUBookShop64.Sale
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            // เปิด frmSale
+            frmSale frm = new frmSale(this.EmpName,this.EmpID);
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 }

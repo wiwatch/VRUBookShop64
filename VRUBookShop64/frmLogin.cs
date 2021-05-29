@@ -66,14 +66,15 @@ namespace VRUBookShop64
                if (dt.Rows[0]["PosID"].ToString() == "1")
                 {
                     // MessageBox.Show("พนักงานขาย");
-                    frmSaleMenu frm = new frmSaleMenu(dt.Rows[0]["EmpName"].ToString());
+                    frmSaleMenu frm = new frmSaleMenu(dt.Rows[0]["EmpName"].ToString(),dt.Rows[0]["EmpID"].ToString());
                     frm.Show();
                     this.Hide();
                 } 
                 else if (dt.Rows[0]["PosID"].ToString() == "2")
                 {
                     // MessageBox.Show("พนักงานคลังสินค้า");
-                    frmStock frm = new frmStock();
+                    int EmpID = int.Parse(dt.Rows[0]["EmpID"].ToString());
+                    frmStock frm = new frmStock(EmpID);
                     frm.Show();
                     this.Hide();
                 }

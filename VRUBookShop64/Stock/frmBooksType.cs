@@ -12,9 +12,11 @@ namespace VRUBookShop64.Stock
 {
     public partial class frmBooksType : Form
     {
-        public frmBooksType()
+        int EmpID;
+        public frmBooksType(int EmpID)
         {
             InitializeComponent();
+            this.EmpID = EmpID;
         }
 
         private void tsbExit_Click(object sender, EventArgs e)
@@ -58,6 +60,11 @@ namespace VRUBookShop64.Stock
             db.SaveChanges();
             this.showDgvBookType();
             this.clear();
+            //   int bookTypeID = db.tbBookType.Max(bt => bt.BookTypeID);
+            //  MessageBox.Show(bookTypeID.ToString());
+            var bookType = db.tbBookType.Single(bt => bt.BookTypeID == 12);
+           MessageBox.Show(bookType.BookTypeID.ToString());
+           
         }
         private void clear()
         {
