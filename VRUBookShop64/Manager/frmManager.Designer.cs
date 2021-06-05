@@ -32,14 +32,14 @@ namespace VRUBookShop64.Manager
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.tsslUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.รายงานสนคาในคลงToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.รายงานการขายประจำวนToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.รายงานพนกงานToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.tsslUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +70,23 @@ namespace VRUBookShop64.Manager
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 82);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsslUser});
+            this.statusStrip1.Location = new System.Drawing.Point(5, 480);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(898, 32);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // tsslUser
+            // 
+            this.tsslUser.Name = "tsslUser";
+            this.tsslUser.Size = new System.Drawing.Size(179, 25);
+            this.tsslUser.Text = "toolStripStatusLabel1";
+            // 
             // toolStripDropDownButton1
             // 
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -98,6 +115,7 @@ namespace VRUBookShop64.Manager
             this.รายงานการขายประจำวนToolStripMenuItem.Name = "รายงานการขายประจำวนToolStripMenuItem";
             this.รายงานการขายประจำวนToolStripMenuItem.Size = new System.Drawing.Size(303, 58);
             this.รายงานการขายประจำวนToolStripMenuItem.Text = "รายงานการขายประจำวัน";
+            this.รายงานการขายประจำวนToolStripMenuItem.Click += new System.EventHandler(this.รายงานการขายประจำวนToolStripMenuItem_Click);
             // 
             // รายงานพนกงานToolStripMenuItem
             // 
@@ -105,6 +123,7 @@ namespace VRUBookShop64.Manager
             this.รายงานพนกงานToolStripMenuItem.Name = "รายงานพนกงานToolStripMenuItem";
             this.รายงานพนกงานToolStripMenuItem.Size = new System.Drawing.Size(303, 58);
             this.รายงานพนกงานToolStripMenuItem.Text = "รายงานพนักงาน";
+            this.รายงานพนกงานToolStripMenuItem.Click += new System.EventHandler(this.รายงานพนกงานToolStripMenuItem_Click);
             // 
             // toolStripButton2
             // 
@@ -125,23 +144,6 @@ namespace VRUBookShop64.Manager
             this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
-            // statusStrip1
-            // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsslUser});
-            this.statusStrip1.Location = new System.Drawing.Point(5, 480);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(898, 32);
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // tsslUser
-            // 
-            this.tsslUser.Name = "tsslUser";
-            this.tsslUser.Size = new System.Drawing.Size(179, 25);
-            this.tsslUser.Text = "toolStripStatusLabel1";
-            // 
             // frmManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -150,6 +152,7 @@ namespace VRUBookShop64.Manager
             this.ControlBox = false;
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
+            this.IsMdiContainer = true;
             this.Name = "frmManager";
             this.Padding = new System.Windows.Forms.Padding(5);
             this.Text = "รายการทำงานของผู้จัดการร้าน";

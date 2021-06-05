@@ -26,5 +26,19 @@ namespace VRUBookShop64.Manager
         {
             Environment.Exit(1);
         }
+
+        private void รายงานพนกงานToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReportEmployee frm = new frmReportEmployee();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void รายงานการขายประจำวนToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReportSale frm = new frmReportSale();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

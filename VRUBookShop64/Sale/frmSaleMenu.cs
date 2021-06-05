@@ -30,6 +30,13 @@ namespace VRUBookShop64.Sale
             Environment.Exit(0);
         }
 
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            frmReportSale frm = new frmReportSale(this.EmpID);
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             // เปิด frmSale

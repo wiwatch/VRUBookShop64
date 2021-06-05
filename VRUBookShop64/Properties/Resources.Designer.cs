@@ -253,6 +253,16 @@ namespace VRUBookShop64.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_close_delete_709754 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_close_delete_709754", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_delete {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_delete", resourceCulture);
@@ -343,6 +353,16 @@ namespace VRUBookShop64.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_print_560963 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_print_560963", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_Save {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_Save", resourceCulture);
@@ -406,6 +426,16 @@ namespace VRUBookShop64.Properties {
         internal static System.Drawing.Bitmap iconfinder_search_2856511 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_search_2856511", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_search_button_36847 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_search_button_36847", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

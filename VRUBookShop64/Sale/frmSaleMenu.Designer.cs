@@ -101,6 +101,7 @@ namespace VRUBookShop64.Sale
             this.toolStripButton2.Size = new System.Drawing.Size(131, 77);
             this.toolStripButton2.Text = "ดูรายงานการขาย";
             this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton3
             // 

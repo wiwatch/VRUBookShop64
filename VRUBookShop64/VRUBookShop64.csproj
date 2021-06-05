@@ -33,6 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -44,6 +49,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -105,8 +112,38 @@
     <Compile Include="Manager\frmManager.Designer.cs">
       <DependentUpon>frmManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manager\frmReportEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\frmReportEmployee.Designer.cs">
+      <DependentUpon>frmReportEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\frmReportSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\frmReportSale.Designer.cs">
+      <DependentUpon>frmReportSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\rptEmployee1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEmployee1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Manager\rptSaleAll.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSaleAll.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sale\frmReportSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\frmReportSale.Designer.cs">
+      <DependentUpon>frmReportSale.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sale\frmSale.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +225,20 @@
     <EmbeddedResource Include="Manager\frmManager.resx">
       <DependentUpon>frmManager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Manager\frmReportEmployee.resx">
+      <DependentUpon>frmReportEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\frmReportSale.resx">
+      <DependentUpon>frmReportSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\rptEmployee1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEmployee1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\rptSaleAll.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSaleAll.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -198,6 +249,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Sale\frmReportSale.resx">
+      <DependentUpon>frmReportSale.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sale\frmSale.resx">
       <DependentUpon>frmSale.cs</DependentUpon>
     </EmbeddedResource>
@@ -256,6 +310,9 @@
     <None Include="Resources\iconfinder_Gnome-Edit-Clear-32_549703.png" />
     <None Include="Resources\iconfinder_print_560962.png" />
     <None Include="Resources\iconfinder_close_delete_709753.png" />
+    <None Include="Resources\iconfinder_close_delete_709754.png" />
+    <None Include="Resources\iconfinder_print_560963.png" />
+    <None Include="Resources\iconfinder_search_button_36847.png" />
     <Content Include="VRUBookShopModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>VRUBookShopModel.Context.cs</LastGenOutput>
@@ -335,6 +392,7 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
